@@ -1,8 +1,6 @@
 " Pathogen
+runtime bundle/vim-pathogen/autoload/pathogen.vim
 execute pathogen#infect()
-
-" Filetype detection 
-filetype plugin indent on
 
 " Use the Solarized Dark theme
 set background=dark
@@ -103,7 +101,17 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 " Automatic commands
 if has("autocmd")
 	" Enable file type detection
-	filetype on
+	filetype plugin indent on
+
 	" Treat .json files as .js
 	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
+	autocmd BufRead,BufNewFile *.twig setfiletype=htmljinja
+	autocmd BufRead,BufNewFile *.php setlocal tabstop=4 shiftwidth=4
+	autocmd BufRead,BufNewFile *.phtml setlocal tabstop=4 shiftwidth=4
+	autocmd BufRead,BufNewFile *.md setfiletype=ghmarkdown
 endif
+
+" nerdtree
+noremap <leader>o :NERDTree<cr>
+" vdebug
+noremap <leader>x :Breakpoint<cr>
