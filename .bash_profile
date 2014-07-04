@@ -46,3 +46,10 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+# Set locales for terminal
+export LC_ALL="en_US.UTF-8"
+export LANG="en_US.UTF-8"
+
+# ll
+alias ll="ls -lG"
