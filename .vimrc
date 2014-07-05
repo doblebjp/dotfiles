@@ -113,5 +113,6 @@ endif
 
 " nerdtree
 noremap <leader>o :NERDTree<cr>
+let NERDTreeShowHidden=1
 " vdebug
 noremap <leader>x :Breakpoint<cr>
