@@ -113,6 +113,7 @@ if has("autocmd")
 	autocmd BufRead,BufNewFile *.php setlocal tabstop=4 shiftwidth=4
 	autocmd BufRead,BufNewFile *.phtml setlocal tabstop=4 shiftwidth=4
 	autocmd BufRead,BufNewFile *.md setfiletype ghmarkdown
+	autocmd BufReadPost * DetectIndent
 endif
 
 " NERDtree
