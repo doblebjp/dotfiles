@@ -108,15 +108,26 @@ if has("autocmd")
 	filetype plugin indent on
 
 	" Treat .json files as .js
-	autocmd BufNewFile,BufRead *.json setfiletype json syntax=javascript
-	autocmd BufRead,BufNewFile *.twig setfiletype=htmljinja
+	autocmd BufRead,BufNewFile *.json setfiletype json syntax=javascript
+	autocmd BufRead,BufNewFile *.twig setfiletype htmljinja
 	autocmd BufRead,BufNewFile *.php setlocal tabstop=4 shiftwidth=4
 	autocmd BufRead,BufNewFile *.phtml setlocal tabstop=4 shiftwidth=4
-	autocmd BufRead,BufNewFile *.md setfiletype=ghmarkdown
+	autocmd BufRead,BufNewFile *.md setfiletype ghmarkdown
 endif
 
-" nerdtree
-noremap <leader>o :NERDTree<cr>
+" NERDtree
+noremap <leader>o :NERDTree<CR>
 let NERDTreeShowHidden=1
-" vdebug
-noremap <leader>x :Breakpoint<cr>
+
+" Vdebug
+noremap <leader>x :Breakpoint<CR>
+
+" Toggle tab
+function! TabToggle()
+	if &expandtab
+		setlocal noexpandtab
+	else
+		setlocal expandtab
+	endif
+endfunction
+nmap <leader><tab> mz:execute TabToggle()<CR>'z
