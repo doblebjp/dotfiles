@@ -116,7 +116,7 @@ if has("autocmd")
 endif
 
 " NERDtree
-noremap <leader>o :NERDTree<CR>
+noremap <leader>o :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 " Vdebug
