@@ -6,6 +6,8 @@ execute pathogen#infect()
 set background=dark
 colorscheme solarized
 
+	" Enable file type detection
+	filetype plugin indent on
 " Make Vim more useful
 set nocompatible
 " Use the OS clipboard by default (on versions compiled with `+clipboard`)
@@ -104,9 +106,6 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " Automatic commands
 if has("autocmd")
-	" Enable file type detection
-	filetype plugin indent on
-
 	" Treat .json files as .js
 	autocmd BufRead,BufNewFile *.json setfiletype json syntax=javascript
 	autocmd BufRead,BufNewFile *.twig setfiletype htmljinja
@@ -121,7 +120,7 @@ noremap <leader>o :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
 
 " Vdebug
-noremap <leader>x :Breakpoint<CR>
+noremap <leader>b :Breakpoint<CR>
 
 " Toggle tab
 function! TabToggle()
