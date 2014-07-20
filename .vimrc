@@ -115,6 +115,12 @@ if has("autocmd")
 	autocmd BufReadPost * DetectIndent
 endif
 
+" Reload .vimrc
+noremap <leader>. :so $MYVIMRC<CR>
+
+" No highlite
+noremap <leader>, :noh<CR> 
+
 " NERDtree
 noremap <leader>o :NERDTreeToggle<CR>
 let NERDTreeShowHidden=1
