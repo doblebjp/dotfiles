@@ -107,11 +107,10 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 " Automatic commands
 if has("autocmd")
 	" Treat .json files as .js
-	autocmd BufRead,BufNewFile *.json setfiletype json syntax=javascript
-	autocmd BufRead,BufNewFile *.twig setfiletype htmljinja
-	autocmd BufRead,BufNewFile *.php setlocal tabstop=4 shiftwidth=4
-	autocmd BufRead,BufNewFile *.phtml setlocal tabstop=4 shiftwidth=4
-	autocmd BufRead,BufNewFile *.md setfiletype ghmarkdown
+	autocmd BufRead,BufNewFile *.json set filetype=json syntax=javascript
+	autocmd BufRead,BufNewFile *.twig set filetype=htmljinja
+	autocmd BufRead,BufNewFile *.php,*.phtml setlocal tabstop=4 shiftwidth=4
+	autocmd BufRead,BufNewFile *.md set filetype=ghmarkdown
 	autocmd BufReadPost * DetectIndent
 endif
 
