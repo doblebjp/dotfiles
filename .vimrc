@@ -136,3 +136,6 @@ function! TabToggle()
 	endif
 endfunction
 nmap <leader><tab> mz:execute TabToggle()<CR>'z
+
+" No wrap
+set nowrap
