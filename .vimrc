@@ -108,7 +108,6 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 if has("autocmd")
 	autocmd BufRead,BufNewFile *.php,*.phtml setlocal tabstop=4 shiftwidth=4
 	autocmd BufRead,BufNewFile *.md set filetype=ghmarkdown
-	autocmd BufReadPost * DetectIndent
 endif
 
 " Reload .vimrc
