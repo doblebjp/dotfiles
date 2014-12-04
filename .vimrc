@@ -106,8 +106,6 @@ noremap <leader>W :w !sudo tee % > /dev/null<CR>
 
 " Automatic commands
 if has("autocmd")
-	" Treat .json files as .js
-	autocmd BufRead,BufNewFile *.json set filetype=json syntax=javascript
 	autocmd BufRead,BufNewFile *.php,*.phtml setlocal tabstop=4 shiftwidth=4
 	autocmd BufRead,BufNewFile *.md set filetype=ghmarkdown
 	autocmd BufReadPost * DetectIndent
