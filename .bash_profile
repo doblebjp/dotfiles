@@ -46,3 +46,8 @@ complete -W "NSGlobalDomain" defaults;
 
 # Add `killall` tab completion for common apps
 complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes SystemUIServer Terminal Twitter" killall;
+
+# GO path
+# https://golang.org/doc/code.html#GOPATH
+export GOPATH=$HOME
+export PATH=$PATH:/usr/local/opt/go/libexec/bin
