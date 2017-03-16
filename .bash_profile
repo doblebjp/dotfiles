@@ -51,3 +51,6 @@ complete -o "nospace" -W "Contacts Calendar Dock Finder Mail Safari iTunes Syste
 # https://golang.org/doc/code.html#GOPATH
 export GOPATH=$HOME
 export PATH=$PATH:/usr/local/opt/go/libexec/bin
+
+# Some homebrew packages install to /usr/local/sbin
+export PATH=$PATH:/usr/local/sbin
