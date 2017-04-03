@@ -135,3 +135,6 @@ nmap <leader><tab> mz:execute TabToggle()<CR>'z
 
 " No wrap
 set nowrap
+
+" Allow JSX in normal JS files
+let g:jsx_ext_required = 0
