@@ -54,3 +54,6 @@ export PATH=$PATH:/usr/local/opt/go/libexec/bin
 
 # Some homebrew packages install to /usr/local/sbin
 export PATH=$PATH:/usr/local/sbin
+
+# PEAR
+export PATH=$PATH:$HOME/pear/bin
