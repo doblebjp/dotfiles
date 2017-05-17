@@ -53,6 +53,7 @@ install xpdf
 install zopfli
 install composer
 install homebrew/versions/lua52
+install tmux
 
 # Remove outdated versions from the cellar
 cleanup
