@@ -33,7 +33,7 @@ install narwhal
 install vim --override-system-vi
 install homebrew/dupes/grep
 install homebrew/dupes/screen
-install homebrew/php/php55 --with-gmp
+install homebrew/php/php71
 
 # Install other useful binaries
 install ack
@@ -57,7 +57,7 @@ install ucspi-tcp # `tcpserver` et al.
 install webkit2png
 install xpdf
 install zopfli
-
+install composer
 install homebrew/versions/lua52
 
 # Remove outdated versions from the cellar

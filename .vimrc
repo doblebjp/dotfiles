@@ -137,3 +137,5 @@ set nowrap
 let g:jsx_ext_required = 0
 " Make syntastic check use eslint
 let g:syntastic_javascript_checkers = ['eslint']
+" syntastic PHP check
+let g:syntastic_php_checkers = ['php', 'phpcs']
