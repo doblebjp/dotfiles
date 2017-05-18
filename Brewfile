@@ -54,6 +54,7 @@ install zopfli
 install composer
 install homebrew/versions/lua52
 install tmux
+install cmake
 
 # Remove outdated versions from the cellar
 cleanup
