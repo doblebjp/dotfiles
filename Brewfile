@@ -1,60 +1,79 @@
-# Install command-line tools using Homebrew
-# Usage: `brew bundle Brewfile`
-
-# Make sure we’re using the latest Homebrew
-update
-
-# Upgrade any already-installed formulae
-upgrade
-
-# Install GNU core utilities (those that come with OS X are outdated)
-# Don’t forget to add `$(brew --prefix coreutils)/libexec/gnubin` to `$PATH`.
-install coreutils
-# Install some other useful utilities like `sponge`
-install moreutils
-# Install GNU `find`, `locate`, `updatedb`, and `xargs`, `g`-prefixed
-install findutils
-# Install GNU `sed`, overwriting the built-in `sed`
-install gnu-sed --default-names
-# Install Bash 4
-# Note: don’t forget to add `/usr/local/bin/bash` to `/etc/shells` before running `chsh`.
-install bash
-install bash-completion
-
-# Install wget with IRI support
-install wget --enable-iri
-
-# Install more recent versions of some OS X tools
-install vim --override-system-vi
-install homebrew/dupes/grep
-install homebrew/dupes/screen
-install homebrew/php/php71
-
-# Install other useful binaries
-install ack
-install bfg
-#install exiv2
-install foremost
-install git
-install hashpump
-install imagemagick --with-webp
-install lynx
-install nmap
-install node # This installs `npm` too using the recommended installation method
-install p7zip
-install pigz
-install pv
-install rename
-install sqlmap
-install tree
-install ucspi-tcp # `tcpserver` et al.
-install webkit2png
-install xpdf
-install zopfli
-install composer
-install homebrew/versions/lua52
-install tmux
-install cmake
-
-# Remove outdated versions from the cellar
-cleanup
+tap "caskroom/cask"
+tap "homebrew/bundle"
+tap "homebrew/core"
+tap "homebrew/dupes"
+tap "homebrew/php"
+tap "homebrew/services"
+tap "homebrew/versions"
+brew "sqlite"
+brew "aircrack-ng"
+brew "autoconf"
+brew "git"
+brew "phantomjs"
+brew "cctools"
+brew "cmake"
+brew "curl"
+brew "docker"
+brew "dos2unix"
+brew "elinks"
+brew "faac"
+brew "lame"
+brew "xvid"
+brew "ffmpeg"
+brew "flac"
+brew "gdbm"
+brew "gnupg"
+brew "go"
+brew "jpeg"
+brew "libav"
+brew "libevent"
+brew "libtool"
+brew "libvo-aacenc"
+brew "python"
+brew "libyaml"
+brew "lynx"
+brew "memtester"
+brew "mysql", restart_service: true
+brew "pkg-config"
+brew "postgresql"
+brew "pv"
+brew "rbenv"
+brew "reattach-to-user-namespace"
+brew "rename"
+brew "rsync"
+brew "ruby"
+brew "tcpdump"
+brew "tcptrace"
+brew "texi2html"
+brew "tmux"
+brew "tree"
+brew "unar"
+brew "unixodbc"
+brew "unrar"
+brew "vim"
+brew "watchman"
+brew "wget"
+brew "yarn"
+brew "yasm"
+brew "youtube-dl"
+brew "zlib"
+brew "homebrew/php/composer"
+brew "homebrew/php/php71"
+cask "atom"
+cask "darktable"
+cask "inkscape"
+cask "java"
+cask "lisanet-gimp"
+cask "skyfonts"
+cask "skype"
+cask "slack"
+cask "vagrant"
+cask "virtualbox"
+cask "whatsapp"
+cask "xquartz"
+cask "phpstorm"
+cask "google-chrome"
+cask "iterm2"
+cask "the-unarchiver"
+cask "imagealpha"
+cask "imageoptim"
