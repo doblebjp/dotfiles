@@ -2,6 +2,8 @@
 
 cd "$(dirname "${BASH_SOURCE}")";
 
+mkdir -p .vim/autoload ~/.vim/bundle && curl -LSso .vim/autoload/pathogen.vim https://tpo.pe/pathogen.vim
+
 git pull origin master;
 
 npm install -g eslint
