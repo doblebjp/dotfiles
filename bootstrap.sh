@@ -3,8 +3,7 @@
 cd "$(dirname "${BASH_SOURCE}")";
 
 git pull origin master
-git submodule init
-git submodule update
+git submodule update --init --recursive
 
 npm install -g eslint
 npm install -g babel-eslint
@@ -13,6 +12,9 @@ npm install -g typescript
 npm install -g tslint
 
 composer global require "squizlabs/php_codesniffer"
+
+# compile YouCompleteMe
+# (cd .vim/bundle/YouCompleteMe && ./install.py --clang-completer --tern-completer)
 
 function doIt() {
 	rsync --exclude ".git/" --exclude ".DS_Store" --exclude "bootstrap.sh" \
