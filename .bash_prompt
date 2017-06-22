@@ -89,18 +89,18 @@ else
 	yellow="\e[1;33m";
 fi;
 
-# Highlight the user name when logged in as root.
-if [[ "${USER}" == "root" ]]; then
-	userStyle="${red}";
-else
-	userStyle="${green}";
-fi;
-
 # Highlight the hostname when connected via SSH.
 if [[ "${SSH_TTY}" ]]; then
-	hostStyle="${red}";
+	userStyle="${orange}";
+	hostStyle="${orange}";
 else
-	hostStyle="";
+	userStyle="${green}";
+	hostStyle="${green}";
+fi;
+
+# Highlight the user name when logged in as root.
+if [[ "${USER}" == "root" ]]; then
+	userStyle="${purple}";
 fi;
 
 # Set the terminal title to the current working directory.
