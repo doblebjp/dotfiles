@@ -39,7 +39,6 @@ brew "lynx"
 brew "memtester"
 brew "mysql", restart_service: true
 brew "node"
-brew "phantomjs"
 brew "unixodbc"
 brew "php", link: false
 brew "php@7.1", args: ["with-pear"]
