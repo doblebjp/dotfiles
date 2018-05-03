@@ -39,6 +39,7 @@ brew "lynx"
 brew "memtester"
 brew "mysql", restart_service: true
 brew "node"
+brew "phantomjs"
 brew "unixodbc"
 brew "php", link: false
 brew "php@7.1", args: ["with-pear"]
@@ -46,6 +47,7 @@ brew "pkg-config"
 brew "postgresql", restart_service: true
 brew "pv"
 brew "python"
+brew "python@2"
 brew "rbenv"
 brew "reattach-to-user-namespace"
 brew "rename"
@@ -58,7 +60,7 @@ brew "tmux"
 brew "tree"
 brew "unar"
 brew "unrar"
-brew "vim"
+brew "vim", args: ["with-python@2"]
 brew "watchman"
 brew "wget"
 brew "yarn"
