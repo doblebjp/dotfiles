@@ -40,8 +40,7 @@ brew "memtester"
 brew "mysql", restart_service: true
 brew "node"
 brew "unixodbc"
-brew "php", link: false
-brew "php@7.1", args: ["with-pear"]
+brew "php@7.1"
 brew "pkg-config"
 brew "postgresql", restart_service: true
 brew "pv"
